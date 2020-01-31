@@ -1,0 +1,86 @@
+.rgbKineticSlider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /*left: 0;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    
+    transform-origin: 50% 50%;*/
+}
+
+canvas {
+    position: absolute;
+    display : block;
+    top:0;
+    left : 0;
+}
+
+nav a {
+    color: var(--color-link-hover);
+    text-decoration: none;
+    /*margin-right: 14px;*/
+    position: absolute;
+    top: 50vh;
+    z-index: 1;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color-link-hover);
+    outline: none;
+}
+
+nav span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-link-hover);
+    display: block;
+    margin-top: 7px;
+    -moz-transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+
+nav a:hover span {
+    width: 0;
+}
+
+nav a.next {
+    right: 10vw;
+}
+
+nav a.prev {
+    left: 10vw;
+}
+
+.notice {
+    text-decoration: none;
+    /*margin-right: 14px;*/
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    z-index: 1;
+    color: var(--color-link);
+}
+
+@media screen and (max-width: 53em) {
+
+    nav a {
+        top : auto;
+        bottom : 3rem;
+    }
+
+    .notice {
+        bottom: auto;
+        top: 2rem;
+        left : 10vw;
+        left: 3rem;
+    }
+
+}

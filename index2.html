@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Demoname | Demo 2 | Codrops</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body class="demo-1">
+		<main>
+			<div class="message">Some message for mobile (if needed).</div>
+			<div class="frame">
+				<div class="frame__title-wrap">
+					<h1 class="frame__title">Title</h1>
+					<p class="frame__tagline">Subtitle</a></p>
+				</div>
+				<div class="frame__links">
+					<a href="">Previous Demo</a>
+					<a href="">Article</a>
+					<a href="">GitHub</a>
+				</div>
+				<div class="frame__demos">
+					<a href="index.html" class="frame__demo">demo 1</a>
+					<a href="index2.html" class="frame__demo frame__demo--current">demo 2</a>
+					<a href="index3.html" class="frame__demo">demo 3</a>
+				</div>
+			</div>
+			<div class="content">
+				<!-- the content -->
+				<div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+				<nav>
+			        <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+			        <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+                </nav>
+                <span class="notice">Swipe left... or right</span>
+			</div>
+		</main>
+		<!--script src="https://tympanus.net/codrops/adpacks/demoad.js"></script-->
+		<script src="js/libs/imagesLoaded.pkgd.min.js"></script>
+		<script src="js/libs/pixi.min.js"></script>
+		<script src="js/libs/pixi-filters.min.js"></script>
+		<script src="js/libs/TweenMax.min.js"></script>
+		<script src="js/rgbKineticSlider.js"></script>
+		<script>
+            
+            // images setup
+			const images = [
+			    "img/blue-02.jpg",
+			    "img/blue-03.jpg",
+			    "img/blue-01.jpg",
+			];
+            
+            // content setup
+			const texts = [
+			    ["Earth", "Surface gravity‎: ‎9.807 m/s²"],
+			    ["Mars", "Surface gravity‎: ‎3.711 m/s²"],
+			    ["Venus", "Surface gravity‎: ‎8.87 m/s²"],
+			]
+
+			rgbKineticSlider = new rgbKineticSlider({
+			    slideImages: images, // array of images > must be 1920 x 1080
+			    // itemsTitles: texts, // array of titles / subtitles
+
+			    backgroundDisplacementSprite: 'img/map-2.jpg', // slide displacement image 
+			    cursorDisplacementSprite: 'img/displace-circle.png', // cursor displacement image 
+
+			    cursorImgEffect : true, // enable cursor effect
+			    cursorTextEffect : false, // enable cursor text effect
+			    cursorScaleIntensity : 0.85, // cursor effect intensity
+			    cursorMomentum : 0.09, // lower is slower
+
+			    swipe: true, // enable swipe
+			    swipeDistance : window.innerWidth * 0.5, // swipe distance - ex : 580
+			    swipeScaleIntensity: 1.66, // scale intensity during swipping
+
+			    slideTransitionDuration : 1, // transition duration
+			    transitionScaleIntensity : 10, // scale intensity during transition
+			    transitionScaleAmplitude : 100, // scale amplitude during transition
+
+			    nav: true, // enable navigation
+			    navElement: '.main-nav', // set nav class
+			    
+			    imagesRgbEffect : true, // enable img rgb effect
+			    imagesRgbIntensity : 0.09, // set img rgb intensity
+			    navImagesRgbIntensity : 40, // set img rgb intensity for regular nav
+
+			    textsDisplay : false, // show title
+			    textsSubTitleDisplay : false, // show subtitles
+			    textsTiltEffect : false, // enable text tilt
+			    googleFonts : ['Playfair Display:700', 'Roboto:400'], // select google font to use
+			    // buttonMode : false, // enable button mode for title
+			    // textsRgbEffect : true, // enable text rgb effect
+			    // textsRgbIntensity : 0.09, // set text rgb intensity
+			    // navTextsRgbIntensity : 10, // set text rgb intensity for regular nav
+
+			    // textTitleColor : 'white', // title color
+			    // textTitleSize : 125, // title size
+			    // mobileTextTitleSize : 45, // title size
+			    // textTitleLetterspacing : 3, // title letterspacing
+
+			    // textSubTitleColor : 'white', // subtitle color ex : 0x000000
+			    // textSubTitleSize : 21, // subtitle size
+			    // mobileTextSubTitleSize : 14,
+			    // textSubTitleLetterspacing : 3, // subtitle letter spacing
+			    // textSubTitleOffsetTop : 90, // subtitle offset top
+			    // mobileTextSubTitleOffsetTop : 50,
+			});
+		</script>
+	</body>
+</html>
