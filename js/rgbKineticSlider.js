@@ -58,9 +58,8 @@
 
         // remove pixi message in console
         PIXI.utils.skipHello();
-        // PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
-        const renderer = new PIXI.autoDetectRenderer(imgWidth,imgHeight, { // PIXI.autoDetectRenderer
+        const renderer = new PIXI.autoDetectRenderer(imgWidth,imgHeight, {
             transparent: true,
             autoResize: true,
             resolution: devicePixelRatio,
@@ -135,13 +134,9 @@
             // append render to canvas
             canvas.appendChild(renderer.view);
 
-            
-
             // set dispFilter to the stage
             stage.filters = [dispFilter];
             // stage.scale.set(2)
-
-
 
             // enable cursorInteractive on mainContainer
             mainContainer.interactive = true;
@@ -216,8 +211,6 @@
             render.add(function(delta) {
                 renderer.render(stage);
             });
-
-            
         }
 
         
@@ -294,15 +287,11 @@
 
                         if(window.innerWidth < 768) {
                             word_wrap = window.innerWidth * 1.5;
-
-                            // alert(word_wrap)
                         }
 
                         else {
                             word_wrap = window.innerWidth / 2
                         }
-
-                        // alert(word_wrap)
 
                         // get string after :
                         let fontWeight_1 = options.googleFonts[0].split(":").pop();
@@ -409,7 +398,6 @@
             dispSprite.anchor.set(0.5);
             dispSprite.x = renderer.view.width / 2;
             dispSprite.y = renderer.view.height / 2;
-            
             
             // set timeline with callbacks
             timelineTransition = new TimelineMax({
@@ -659,22 +647,17 @@
                 tilt( currentIndex, kineX, kineY )
             }
 
-            // make kineX and kineY return always positive value from x to 0
-            // if (kineX < 0 ) kineX = -kineX;
-            // if (kineY <  0) kineY = -kineY;
-
             // if flag has changed 
             if( is_moving === true ) {
                 // update cursor displacement sprite positions on cursor moving
-                // setTimeout(function () {
-                    dispSprite_2.x = vx;
-                    dispSprite_2.y = vy ;
+                dispSprite_2.x = vx;
+                dispSprite_2.y = vy ;
 
-                    TweenMax.to(dispFilter_2.scale, 0.5, {
-                            x: kineX * options.cursorScaleIntensity,
-                            y: kineY *  options.cursorScaleIntensity,
-                            ease: Power4.easeOut
-                    });
+                TweenMax.to(dispFilter_2.scale, 0.5, {
+                        x: kineX * options.cursorScaleIntensity,
+                        y: kineY *  options.cursorScaleIntensity,
+                        ease: Power4.easeOut
+                });
             }
 
             // make background displacement follow mouse position on transition events
@@ -922,10 +905,8 @@
 
             // interactivity
             cursorInteractive();
-
             swipe();
             slideTransition(currentIndex);
-
             
             // Listen for window resize events
             window.addEventListener('resize', resizeTexts);
