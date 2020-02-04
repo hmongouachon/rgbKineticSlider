@@ -11,7 +11,7 @@ A fully customizable webgl slider based on PixiJs and Gsap.
 * Background image rgb split effect
 * Titles and subtitles rgb split effect
  
-Check the demos of this project on codepen :
+### Demos links on codepen :
 
 * Demo 1 on [codepen](https://codepen.io/hmongouachon/pen/QWbLpzW) 
 * Demo 2 on [codepen](https://codepen.io/hmongouachon/pen/jOPNBdP) 
