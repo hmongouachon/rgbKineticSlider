@@ -37,12 +37,12 @@ A fully customizable webgl slider based on PixiJs and Gsap.
 const images = [
      "img/nature-01.jpg",
      "img/nature-02.jpg",
- "img/nature-03.jpg",
+     "img/nature-03.jpg",
 ];
 
 // content setup
 const texts = [
-["Earth", "Surface gravity: 9.807 m/s²"],
+    ["Earth", "Surface gravity: 9.807 m/s²"],
     ["Mars", "Surface gravity: 3.711 m/s²"],
     ["Venus", "Surface gravity: 8.87 m/s²"],
 ]
