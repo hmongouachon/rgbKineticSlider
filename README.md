@@ -17,6 +17,8 @@ A fully customizable webgl slider based on PixiJs and Gsap.
 * Demo 2 on [codepen](https://codepen.io/hmongouachon/pen/jOPNBdP) 
 * Demo 3 on [codepen](https://codepen.io/hmongouachon/pen/eYNOvxB) 
 
+Edit 2021-03-23 : Demos are temporarily broken because of CORS issue w/ codepen
+
 ## Markups :
 
 ```
